@@ -38,7 +38,7 @@ ul {
   margin: 0;
   padding: 0;
   overflow: hidden;
-  background-color: #8764b8;
+  background-color: #21ab4f;
   height:10%;
 }
 li {
@@ -54,7 +54,7 @@ li a {
 
 /* Change the link color to #111 (black) on hover */
 li a:hover {
-  background-color: #8A07C6;}
+  background-color: #09d32e;}
 
 /**
  *02. SLIDER
