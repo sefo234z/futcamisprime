@@ -1,0 +1,251 @@
+<!DOCTYPE HTML>
+<html> 
+  <head>
+    <title>Intranet - Ticket</title> <!-- Titulo de pestaña-->
+    <link rel="icon" href="../Imatges/favicon.jpg"> <!-- Icono de pestaña-->
+    <link href="../Estilos/TicketSilverSanz.css" type="text/css" rel="stylesheet" > <!-- Hoja de estilos CCS-->
+  </head>
+  <body>
+     <!--#region MENU SUPERIOR-->
+     <nav>
+      <ul id="menuSuperior">
+        <li class="float"><a href="HomeSilverSanz.html"><img id="imgLogoMenu" src="../Imatges/logo.jpeg"></a> </li>
+        <li id="separacionInformes" class="float"><a class="opcionesMenu textoMenu" href="EstadisticaSilverSanz.html" title="Camisetas 2024/2025">Camisetas 2024/2025</a></li>
+        <li class="float"><a class="opcionesMenu" href="RecursosSilverSanz.html" title="Camisetas Retro">Camisetas Retro</a></li> 
+     </ul>
+     </nav>
+    <!--#endregion -->      
+     <!--#region MENU LATERAL-->
+    <div id="divMenu">
+      <ul id="lateral">
+          <li><a onclick="newTicket()" href="#nuevoTicket" title="Nuevo Ticket">Nuevo Ticket</a></li>
+          <li><a onclick="busquedaDeCasos()" href="#busquedaCasos" title="Busqueda de casos">Busqueda de casos</a></li>
+          <li><a onclick="manuales()"href="#manuales" title="Manuales">Manuales</a></li>
+          <li><a onclick="prioridades()" href="#prioridades" title="Prioridades">Prioridades</a></li>
+      </ul>
+    </div>
+     <!--#endregion -->      
+     <!--#region PANTALLA INICIAL-->
+     <!--#region FILTRO PANTALLA INICIAL-->
+     <div id="inicio" class="main">
+        <h2 id="resumen">Resumen Tickets</h2>
+      <!--Gestor-->
+      <label for="gestor">Gestor</label>
+      <select id="gestor" name="gestor">
+      <option value="" disabled selected></option>
+      <option value="jordi" >Jordi Pages</option>
+      <option value="montse">Montse Pastor</option>
+     </select>
+      <!--Usuario-->
+      <label for="usuario">Usuario</label>
+      <select id="usuario" name="usuario">
+      <option value="" disabled selected></option>
+      <option value="jordi" >Jordi Pages</option>
+      <option value="montse">Montse Pastor</option>
+      <option value="sergo">Sergi Foix</option>
+      <option value="prueba">Usuario de Prueba</option>
+     </select>
+      <!--Estado-->
+      <label for="estado">Estado</label>
+      <select id="estado" name="estado">
+      <option value="" disabled selected></option>
+      <option value="jordi" >A</option>
+      <option value="montse">C</option>
+      </select>
+     <!--#endregion -->
+     <!--#region TABLA-->
+     <div id="div1">
+      <table>
+        <table>
+          <tr id="cabeceraTable">
+            <th id="caso">Caso</th>
+            <th id="fecha">Fecha</th>
+            <th id="titol">Titulo</th>
+            <th id="usuario">Usuario</th>
+            <th id="gestor">Gestor</th>
+            <th id="prioridad">Prioridad</th>
+            <th id="posicion">Posic</th>
+            <th id="tiempo">Tiempo</th>
+          </tr>
+          <tr>
+            <td>2109</td>
+            <td>16/09/2021</td>
+            <td>TABLA CALCULO COSTES</td>
+            <td>srosario</td>
+            <td>jpages</td>
+            <td>BAJA</td>
+            <td>12</td>
+            <td>00:00</td>
+          </tr>
+          <tr>
+            <td>2047</td>
+            <td>30/12/2021</td>
+            <td>QUERY PARA PICKING-CASO AX177453</td>
+            <td>mpastor</td>
+            <td>jpages</td>
+            <td>ALTA</td>
+            <td>30</td>
+            <td>01:45</td>
+          </tr>
+         
+        </table>
+     </table>
+ </div>
+</div>
+     <!--#endregion -->
+     <!--#endregion -->
+     <!--#region NUEVO TICKET-->
+  <section id="ticketform" class="main" >
+    <form action="#">
+      <h2 id="resumen">Nuevo Ticket</h2>
+     <!--Gestor-->
+      <label for="gestor">Gestor</label>
+      <select id="gestor" name="gestor" >
+        <option value="" disabled selected></option>
+        <option value="jordi" >Jordi Pages</option>
+        <option value="montse">Montse Pastor</option>
+       </select>
+      <!--Prioridad-->
+      <label for="prioridad">Prioridad</label>
+      <select id="prioridad" name="prioridad" required>
+        <option value="baja" selected>Baja</option>
+        <option value="media">Media</option>
+        <option value="alta">Alta</option>
+        <option value="Urgente">Urgente</option>
+      </select>
+      <!--Usuario-->
+      <label for="usuario">Usuario</label>
+      <select id="usuario" name="Gestor" required>
+        <option value="jordi">Sergi Foix</option>
+      </select>
+      <!--Fichero-->
+      <label for="myfile">F. Adjunto:</label>
+      <input type="file" id="myfile" name="myfile"><br><br>
+       <!--Titulo-->
+      <label for="tituloTicket">Titulo: </label>
+     <input type="text" id="tituloTicket" name="titulo"><br><br>
+      <!--Descripcion-->
+      <label for="descripcionTicket">Descripcion: </label><br>
+     <textarea id="descripcionTicket" name="message"></textarea>
+    </form>
+   </section>
+    <!--#endregion --> 
+     <!--#region BUSQUEDA DE CASOS-->
+     <section id="busqueda" class="main">
+      <h2 id="resumen">Busqueda de Casos</h2>
+    <!--Gestor-->
+    <label for="gestor">Gestor</label>
+    <select id="gestor" name="gestor">
+    <option value="" disabled selected></option>
+    <option value="jordi" >Jordi Pages</option>
+    <option value="montse">Montse Pastor</option>
+   </select>
+    <!--Usuario-->
+    <label for="usuario">Usuario</label>
+    <select id="usuario" name="usuario">
+    <option value="" disabled selected></option>
+    <option value="jordi" >Jordi Pages</option>
+    <option value="montse">Montse Pastor</option>
+    <option value="sergo">Sergi Foix</option>
+    <option value="prueba">Usuario de Prueba</option>
+   </select>
+    <!--Estado-->
+    <label for="estado">Estado</label>
+    <select id="estado" name="estado">
+    <option value="" disabled selected></option>
+    <option value="jordi" >A</option>
+    <option value="montse">C</option>
+    </select>
+    <div id="div1">
+      <table>
+        <table>
+          <tr id="cabeceraTable">
+            <th id="caso">Caso</th>
+            <th id="fecha">Fecha</th>
+            <th id="titol">Titulo</th>
+            <th id="usuario">Usuario</th>
+            <th id="gestor">Gestor</th>
+            <th id="prioridad">Prioridad</th>
+            <th id="posicion">Posic</th>
+            <th id="tiempo">Tiempo</th>
+          </tr>
+          <tr>
+            <td>2109</td>
+            <td>16/09/2021</td>
+            <td>TABLA CALCULO COSTES</td>
+            <td>srosario</td>
+            <td>jpages</td>
+            <td>BAJA</td>
+            <td>12</td>
+            <td>00:00</td>
+          </tr>
+          <tr>
+            <td>2047</td>
+            <td>30/12/2021</td>
+            <td>QUERY PARA PICKING-CASO AX177453</td>
+            <td>mpastor</td>
+            <td>jpages</td>
+            <td>ALTA</td>
+            <td>30</td>
+            <td>01:45</td>
+          </tr>
+         
+        </table>
+     </table>
+ </div>
+    </section>
+    <!--#endregion --> 
+     <!--#region MANUALES-->
+    <section id="manuales"  class="main">
+      <h1>Manuales</h1>
+        <label for="filtro">Filtro:</label>
+        <select id="filtro" name="filtro" >
+          <option value="" disabled selected></option>
+          <option value="jordi" >ALMACEN</option>
+          <option value="equiposcomerciales">EQUIPOS COMERCIALES</option>
+          <option value="inventario">INVENTARIO</option>
+          <option value="modelodatos">MODELO DATOS</option>
+          <option value="notatenica">NOTA TECNICA</option>
+          <option value="sap">SAP</option>
+          <option value="ssg-sap">SSG-SAP</option>
+          <option value="telefonia">TELEFONIA</option>
+         </select>
+        </section>
+    <!--#endregion --> 
+     <!--#region PRIORIDADES-->
+     <section id="prioridades" class="main">
+      <h1>Prioridades</h1>
+     </section>
+    <!--#endregion -->  
+     <script>
+    function newTicket() {
+    document.getElementById('ticketform').style.display = 'block'; //Mostramos formulario
+    document.getElementById('busqueda').style.display = 'none'; //Ocultamos formulario
+    document.getElementById('manuales').style.display = 'none'; //Ocultamos formulario
+    document.getElementById('prioridades').style.display = 'none'; //Ocultamos formulario
+    document.getElementById('inicio').style.display = 'none'; //Ocultamos formulario
+    }
+    function busquedaDeCasos() {
+    document.getElementById('busqueda').style.display = 'block'; //Mostramos formulario
+    document.getElementById('ticketform').style.display = 'none'; //Ocultamos formulario
+    document.getElementById('manuales').style.display = 'none'; //Ocultamos formulario
+    document.getElementById('prioridades').style.display = 'none'; //Ocultamos formulario
+    document.getElementById('inicio').style.display = 'none'; //Ocultamos formulario
+    }
+    function manuales() {
+    document.getElementById('manuales').style.display = 'block'; //Mostramos formulario
+    document.getElementById('ticketform').style.display = 'none'; //Ocultamos formulario
+    document.getElementById('busqueda').style.display = 'none'; //Ocultamos formulario
+    document.getElementById('prioridades').style.display = 'none'; //Ocultamos formulario
+    document.getElementById('inicio').style.display = 'none'; //Ocultamos formulario
+    }
+    function prioridades() {
+    document.getElementById('prioridades').style.display = 'block'; //Mostramos formulario
+    document.getElementById('ticketform').style.display = 'none'; //Ocultamos formulario
+    document.getElementById('busqueda').style.display = 'none'; //Ocultamos formulario
+    document.getElementById('manuales').style.display = 'none'; //Ocultamos formulario
+    document.getElementById('inicio').style.display = 'none'; //Ocultamos formulario
+    }
+     </script>
+</body>
+</html>
