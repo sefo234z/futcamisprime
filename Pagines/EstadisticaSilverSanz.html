@@ -9,7 +9,7 @@
     <!--#region MENU SUPERIOR-->
     <nav >
       <ul>
-        <li><a href="HomeSilverSanz.html"><img id="imgLogoMenu" src="../Imatges/logo.jpeg"></a> </li>
+        <li><a href="../index.html"><img id="imgLogoMenu" src="../Imatges/logo.jpeg"></a> </li>
         <li id="separacionInformes" class="float"><a class="opcionesMenu textoMenu" href="EstadisticaSilverSanz.html" title="Camisetas 2024/2025">Camisetas 2024/2025<br>_________</a></li>
         <li class="float"><a class="opcionesMenu" href="RecursosSilverSanz.html" title="Camisetas Retro">Camisetas Retro</a></li>
         <li class="float"><a class="opcionesMenu" href="https://www.instagram.com/futcamisetas_prime?igsh=MTBvMXliZjR0ZmJ4dg==" title="Contacto"><img id="imgLogoInsta" src="../Imatges/instagram-logo-instagram-icon-transparent-free-png.webp"></a></li> 
@@ -17,29 +17,106 @@
      </ul>
      </nav>
      <!--#endregion -->
-    <!--#region INFORMES POWER BI-->
-    <h1>CAMISETAS 2024/2025</h1>         
-    <div class="main">
-    <div class="row">
-      <!-- <h2>Informes Power BI</h2>-->
-
-        <div class="column" title="Primera Equipacion Barcelona 24/25">
-          <a href="../Pagines/PaginesEstadistica/InformeComprasSilverSanz.html">
-        <div class="content">
-          <img src="../Imatges/fcb.jpeg" alt="Imagen" >
-          <h4>Primera Equipacion Barcelona 24/25</h4>
-        </div>
-          </a>
-        </div>
-
-        <div class="column" title="Primera Equipacion Real Madrid 24/25">
-          <a href="../Pagines/PaginesEstadistica/InformeVentasSilverSanz.html">
-        <div class="content">
-          <img src="../Imatges/rm.jpeg" alt="Imagen">
-          <h4>Primera Equipacion Real Madrid 24/25</h4>
+     <div class="main">
+      <h1>CAMISETAS 2024/2025</h1><br> 
+      <div id="myBtnContainer">
+        <button class="btn active" onclick="filterSelection('all')">Todos</button>
+        <button class="btn" onclick="filterSelection('auto')">La Liga EA SPORTS</button>
+        <button class="btn" onclick="filterSelection('manuales')">Premier League</button>
+        <button class="btn" onclick="filterSelection('descargas')">Bundesliga</button>
       </div>
-         </a>
-      </div>
+        <div class="row">
+        <div class="column auto">
+            <a>
+            <div class="content">
+              <img src="../Imatges/rm.jpeg" alt="Real Madrid 2024/2025">
+              <p>Real Madrid 2024/2025</p>
+        </div></a>
+        </div>
+        <div class="column auto">
+          <a>
+          <div class="content">
+          <img src="../Imatges/fcb.jpeg" alt="FC Barcelona 2024/2025">
+            <p>FC Barcelona 2024/2025</p>
+          </div></a>
+        </div>
+        <div class="column manuales">
+          <a >
+          <div class="content">
+          <img src="../Imatges/arsenal2.jpeg" alt="Arsenal 2024/2025">
+            <p>Arsenal 2024/2025</p>
+          </div></a>
+        </div>
+        <div class="column manuales">
+          <a>
 
-  </body>
+          <div class="content">
+            <img src="../Imatges/chelsea.jpeg" alt="Chelsea 2024/2025">
+            <p>Chelsea 2024/2025</p>
+          </div></a>
+        </div>
+        <div class="column descargas">
+          <a>
+          <div class="content">
+          <img src="../Imatges/redbull.jpeg" alt="Leipizg 2024/2025">
+            <p>Leipizg 2024/2025</p><br>
+          </div>
+        </div>
+        <div class="column descargas">
+          <a>
+          <div class="content">
+          <img src="../Imatges/borussia.jpeg" alt="Borussia Dormuntd 2024/2025">
+          <p>Borussia Dormuntd 2024/202</p><br>
+          </div></a>
+        </div>
+        </a>
+      </div>
+      </div>
+      <script>
+        filterSelection("all")
+        function filterSelection(c) {
+          var x, i;
+          x = document.getElementsByClassName("column");
+          if (c == "all") c = "";
+          for (i = 0; i < x.length; i++) {
+            w3RemoveClass(x[i], "show");
+            if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+          }
+        }
+        
+        function w3AddClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            if (arr1.indexOf(arr2[i]) == -1) {element.className += " " + arr2[i];}
+          }
+        }
+        
+        function w3RemoveClass(element, name) {
+          var i, arr1, arr2;
+          arr1 = element.className.split(" ");
+          arr2 = name.split(" ");
+          for (i = 0; i < arr2.length; i++) {
+            while (arr1.indexOf(arr2[i]) > -1) {
+              arr1.splice(arr1.indexOf(arr2[i]), 1);     
+            }
+          }
+          element.className = arr1.join(" ");
+        }
+        
+        
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn");
+        for (var i = 0; i < btns.length; i++) {
+          btns[i].addEventListener("click", function(){
+            var current = document.getElementsByClassName("active");
+            current[0].className = current[0].className.replace(" active", "");
+            this.className += " active";
+          });
+        }
+      </script>
+  <!--#endregion -->  
+</body>
 </html>
