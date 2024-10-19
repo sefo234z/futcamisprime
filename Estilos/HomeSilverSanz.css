@@ -27,31 +27,41 @@
   padding-left: 10px;
 }
 
-/* MENU SUPERIOR */
+/* Para el logo del menú, que solo ocupe el tamaño de la imagen */
 ul {
   list-style-type: none;
   margin: 0;
   padding: 0;
-  display: flex; /* Flexbox */
-  justify-content: space-evenly; /* Espacio uniforme entre elementos */
-  align-items: center; /* Centrar verticalmente */
+  display: flex; /* Flexbox para alinear los elementos */
+  justify-content: space-between; /* Distribuir el espacio entre las opciones */
+  align-items: center; /* Centrar verticalmente las opciones */
   background-color: #21ab4f;
-  height: 20%; /* Incrementar la altura del menú */
+  height: 10%; /* Altura del menú */
 }
 
 li {
-  flex: 1; /* Todos los elementos tendrán el mismo ancho */
+  flex: 1; /* Los demás elementos ocupan el mismo espacio */
   text-align: center;
 }
 
-li a {
-  display: flex; /* Flexbox para alinear los elementos */
-  align-items: center; /* Centrar verticalmente la imagen y el texto */
-  text-decoration: none; /* Elimina el subrayado del texto */
-  color: white; /* Ajustar el color del texto si es necesario */
+/* Para el logo, eliminamos el comportamiento flexible y usamos auto */
+li:first-child {
+  flex: 0; /* Evitar que ocupe espacio extra */
 }
+
+li a {
+  display: flex; /* Mantener flexbox para alinear el texto e imagen si es necesario */
+  align-items: center;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+  padding: 14px 16px;
+}
+
+/* Estilo del logo */
 #imgLogoMenu {
-  margin-right: 20px;
+  width: 60px;
+  height: 60px;
 }
 
 /* RESPONSIVE: Ajustes para pantallas más pequeñas */
@@ -72,7 +82,7 @@ li a {
   }
 }
 /* Change the link color to #111 (black) on hover */
-li a:hover {
+ul a:hover {
   background-color: #09d32e;}
 
 /**
@@ -90,7 +100,7 @@ path{
   max-width: 100%;
 }
 .slide_viewer {
-  height: 500px;
+  height: 590px;
   overflow: hidden;
   position: relative;
 }
@@ -120,7 +130,9 @@ path{
   background-repeat: no-repeat;
 }
 .slide:nth-of-type(3) {
-  background: #C75534;
+  background-image: url('../Imatges/banner3.jpeg');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 a.slide_btn {
   color: #474544;
