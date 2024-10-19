@@ -29,7 +29,6 @@
 }
 
 /* MENU SUPERIOR */
-/* MENU SUPERIOR - Ajustado para un menú más grande */
 ul {
   list-style-type: none;
   margin: 0;
@@ -38,7 +37,7 @@ ul {
   justify-content: space-evenly; /* Espacio uniforme entre elementos */
   align-items: center; /* Centrar verticalmente */
   background-color: #21ab4f;
-  height: 12%; /* Incrementar la altura del menú */
+  height: 20%; /* Incrementar la altura del menú */
 }
 
 li {
@@ -49,25 +48,12 @@ li {
 li a {
   display: block;
   color: white;
-  padding: 20px 24px; /* Incrementar el padding para agrandar las áreas de clic */
-  font-size: 1.2rem; /* Incrementar el tamaño de la fuente */
+  padding: 14px 16px;
   text-decoration: none;
 }
 
-/* Ajustes en los logos */
 #imgLogoMenu {
-  width: 80px; /* Hacer el logo más grande */
-  height: 80px;
   margin-right: 20px;
-}
-
-#imgLogoInsta {
-  width: 45px; /* Hacer el logo de Instagram más grande */
-  height: 45px;
-}
-
-.opcionesMenu {
-  padding-top: 40px; /* Ajuste en el padding para las opciones del menú */
 }
 
 /* RESPONSIVE: Ajustes para pantallas más pequeñas */
@@ -84,18 +70,7 @@ li a {
   }
 
   li a {
-    padding: 15px; /* Ajustar el padding para móviles */
-    font-size: 1.1rem; /* Ajustar el tamaño de la fuente en móviles */
-  }
-
-  #imgLogoMenu {
-    width: 60px; /* Hacer el logo más pequeño en pantallas pequeñas */
-    height: 60px;
-  }
-
-  #imgLogoInsta {
-    width: 35px; /* Ajustar el logo de Instagram en pantallas pequeñas */
-    height: 35px;
+    padding: 10px; /* Reducir el padding en móviles */
   }
 }
 /* Change the link color to #111 (black) on hover */
@@ -136,7 +111,10 @@ path{
   display: block;
 }
 .slide:nth-of-type(1) {
-  background: #D7A151;;
+  background-image: url('../Imatges/banner1.PNG');
+  background-size: cover;
+  background-repeat: no-repeat;
+
 }
 .slide:nth-of-type(2) {
   background: #F4E4CD;
