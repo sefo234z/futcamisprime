@@ -17,12 +17,11 @@
   width: 60px;
   height: 60px;
 }
-.opcionesMenu {
-  padding-top: 35px;
-}
+
 #imgLogoInsta {
-  width: 35px;
+  width: 35px; /* Ajustar el tamaño de la imagen si es necesario */
   height: 35px;
+  margin-right: 10px; /* Separar la imagen del texto con un margen */
 }
 #separacionInformes {
   padding-left: 10px;
@@ -46,12 +45,11 @@ li {
 }
 
 li a {
-  display: block;
-  color: white;
-  padding: 14px 16px;
-  text-decoration: none;
+  display: flex; /* Flexbox para alinear los elementos */
+  align-items: center; /* Centrar verticalmente la imagen y el texto */
+  text-decoration: none; /* Elimina el subrayado del texto */
+  color: white; /* Ajustar el color del texto si es necesario */
 }
-
 #imgLogoMenu {
   margin-right: 20px;
 }
@@ -117,7 +115,9 @@ path{
 
 }
 .slide:nth-of-type(2) {
-  background: #F4E4CD;
+  background-image: url('../Imatges/banner2.PNG');
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 .slide:nth-of-type(3) {
   background: #C75534;
