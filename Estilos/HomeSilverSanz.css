@@ -16,14 +16,10 @@
  #imgLogoMenu{
   width:60px;
   height:60px;
-}
-#imgSilverMenu{
-  width:90px;
-  height:60px;
+  
 }
 .opcionesMenu{
-  height:92px;
-  padding-top:35px;
+  padding-top:50px;
 }
 #imgLogoInsta{
   width:35px;
@@ -39,10 +35,12 @@ ul {
   padding: 0;
   overflow: hidden;
   background-color: #21ab4f;
-  height:10%;
+  
 }
 li {
   float: left;
+
+  
 }
 li a {
   display: block;
@@ -50,6 +48,8 @@ li a {
   text-align: center;
   padding: 14px 16px;
   text-decoration: none;
+  height:125px;
+
 }
 
 /* Change the link color to #111 (black) on hover */
